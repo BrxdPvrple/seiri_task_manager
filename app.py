@@ -36,11 +36,17 @@ def homepage():
 
 
 
+@app.route('/user/<name>')
+def user(name):
+    return render_template("user.html", name=name)
 
 # Manage account details
 @app.route('/manage_account')
 def account():
     return render_template('account.html')
+
+
+
 
 
 
