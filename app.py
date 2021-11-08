@@ -38,7 +38,7 @@ def homepage():
 
 
 # Manage account details
-@app.route('/manage-account')
+@app.route('/manage_account')
 def account():
     return render_template('account.html')
 
