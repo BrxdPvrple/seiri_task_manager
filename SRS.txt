@@ -1,0 +1,54 @@
+SRS For Task Manager App
+
+App Name
+Seiri (Organize in Japanese 整 理)
+
+
+---Front End---
+
+-Home Page-
+welcome
+login(sign up)
+
+-Sign Up-
+full name
+username
+password
+email address
+
+-Manage Account-
+change username
+change password
+delete account
+
+-Manage Tasks-
+add task
+update task
+delete task
+
+---Back End---
+
+Database Tables
+
+-Users-
+user id/primary
+full name
+username
+password
+email address
+
+-Tasks-
+user id/foriegn
+task id/primary
+task content
+
+-Passwords-
+user id/foreign
+password hash
+
+
+LOGO EMBED LINK
+<a href="https://fontmeme.com/japanese/"><img src="https://fontmeme.com/permalink/211029/a385aec4243164355c869497c2c9b8c3.png" alt="japanese" border="0"></a>
+
+OPTION 2
+<a href="https://fontmeme.com/japanese/"><img src="https://fontmeme.com/permalink/211029/3ec3ab056c6760fca21acfd1721b59f2.png" alt="japanese" border="0"></a>
