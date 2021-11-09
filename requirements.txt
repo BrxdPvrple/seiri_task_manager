@@ -6,3 +6,5 @@ flask_testing
 pymysql
 flask-bcrypt
 cryptography
+pytest
+pytest-cov
