@@ -3,9 +3,8 @@
 {% block head %}
 {{ super() }}
 <style type="text/css">
-    .important {
-        color: #573399;
-    }
+
+
 </style>
 {% endblock %}
 
@@ -14,16 +13,14 @@
 {% block content %}
 
 <!-- Header and welcome message -->
-<div class="important">
-    <center>
-        <h1>Welcome to Seiri 整理</h1>
-        <p class="important">
-            Get on track and organize your life today!
-        </p>
-    </center>
+<div class="header">
+    <h1>Welcome to Seiri 整理</h1>
+    <p>
+        Get on track and organize your life today!
+    </p>
 </div>
 
-
+<h1>CHANGES</h1>
 
 <!-- Sign up form -->
 <form action="{{ url_for('sign_up') }}" method="POST">

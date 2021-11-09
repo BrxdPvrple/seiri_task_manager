@@ -1,6 +1,5 @@
 from flask import render_template, request, redirect
 from application import app, db
-# from application.forms import 
 from application.models import Users, Tasks
 from application.forms import SignUp, Login
 

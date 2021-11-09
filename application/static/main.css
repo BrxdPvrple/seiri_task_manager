@@ -1,4 +1,8 @@
-body{
+.header {
+  color: #573399;
+  text-align: center;
+}
 
-    background-color : green
+.button {
+  text-align: center;
 }
