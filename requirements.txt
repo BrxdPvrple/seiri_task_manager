@@ -5,5 +5,4 @@ wtforms
 flask_testing
 pymysql
 flask-bcrypt
-openpyssl
 cryptography

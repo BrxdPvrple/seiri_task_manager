@@ -5,28 +5,32 @@ from os import getenv
 
 # Create an instance of Flask & connect to database
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = getenv("DATABASE_URI")
+# app.config['SQLALCHEMY_DATABASE_URI'] = getenv("DATABASE_URI")
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRETKEY'] = getenv
 db = SQLAlchemy(app)
-# class Employees(db.Model):
-#     empNo = db.Column(db.Integer, primary_key = True)
-#     Name = db.Column(db.CHAR(20))
-#     Subject = db.Column(db.CHAR(20))
-#     Marks = db.Column(db.Integer)
-#     Department = db.Column(db.CHAR(30))
-#     Salary = db.Column(db.Integer)
 
+# Users table class
+class Users(db.Model):
+    id = db.Column(db.Integer, primary_key=True, nullable=False) # User ID
+    surname = db.Column(db.VARCHAR(255))
+    first_name = db.Column(db.VARCHAR(255))
+    username = db.Column(db.VARCHAR(255))
+    email = db.Column(db.VARCHAR(255), nullable=False)
+    password = db.Column(db.VARCHAR(255))
 
+    tasks = db.relationship("Tasks", backref="user")
 
+#Tasks table class
+class Tasks(db.Model):
+    id = db.Column(db.Integer, primary_key=True, nullable=False) # Task ID
+    content = db.Column(db.VARCHAR(255)) # Task Content
 
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
 
-# class Users(db.Model):
-#     User_ID = db.Column(db.Integer, AUTO_INCREMENT, primary_key = True)
-#     Surname = db.Column(db.VARCHAR(255))
-#     First_Name = db.Column(db.VARCHAR(255))
-#     Username = db.Column(db.VARCHAR(255))
-#     Email = db.Column(db.VARCHAR(255))
+db.drop_all()
+db.create_all()
 
 
 # Landing page and sign up area
@@ -44,10 +48,6 @@ def user(name):
 @app.route('/manage_account')
 def account():
     return render_template('account.html')
-
-
-
-#testing
 
 
 
@@ -74,4 +74,4 @@ def account():
 
 
 
-app.run(debug=True)
+app.run(debug=True, )
