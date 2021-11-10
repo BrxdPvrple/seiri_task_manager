@@ -6,10 +6,15 @@ from application.models import Users, Tasks
 from application.forms import SignUpForm, LoginForm
 
 
-
 login_manager = LoginManager()
-login_manager = init_app.py(app)
+login_manager.init_app(app)
 login_manager.login_view = 'login'
+
+
+# Manage logins
+@login_manager.user_loader
+def load_user(user_id):
+    return Users.query.get(int(user_id))
 
 
 
@@ -18,6 +23,8 @@ login_manager.login_view = 'login'
 @app.route('/')
 def index():
     return render_template('index.html')
+
+
 
 
 # Account sign up page
@@ -31,8 +38,10 @@ def signup():
         db.session.add(new_user)
         db.session.commit()
 
-        data = Users.query.all()
-        return render_template('TESTING.html', record=data) #Temporary solution to view user table in browser
+        return render_template('login.html', form=form)
+
+        # data = Users.query.all()
+        # return render_template('TESTING.html', record=data) #Temporary solution to view user table in browser
 
     return render_template('signup.html', form=form)
 
@@ -47,6 +56,7 @@ def login():
         user = Users.query.filter_by(username=form.username.data).first()
         if user:
             if check_password_hash(user.password, form.password.data):
+                login_user(user, remember=form.remember.data)
                 return redirect(url_for('dashboard'))
 
         return '<h1>Invalid Username or Password</h1>'
@@ -54,13 +64,22 @@ def login():
     return render_template('login.html', form=form)
 
 
+
 # User dashboard
 @app.route('/dashboard')
+@login_required
 def dashboard():
     return render_template('dashboard.html')
+
+
+
+
+# Logout current user
+@app.route('/logout')
+@login_required
+def logout():
+    return render_template('index.html')
     
-
-
 
 
 # Manage account details
@@ -74,7 +93,7 @@ def account():
 # Tasks overview and general user area
 @app.route('/task_overview')
 def show_tasks():
-    pass
+    return render_template('task_manager.html')
 
 
 
@@ -82,18 +101,17 @@ def show_tasks():
 #Create a new task
 @app.route('/task_input')
 def new_task():
-    pass
+    return render_template('new_task.html')
 
 
 
 # Edit tasks
 @app.route('/task_update')
 def edit_task():
-    pass
+    return render_template('edit_task.html')
 
 
 # Delete tasks
 @app.route('/task_delete')
 def delete_task():
     pass
-
