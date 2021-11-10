@@ -1,7 +1,17 @@
-from flask import render_template, request, redirect
+from flask import render_template, request, redirect, url_for
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from application import app, db
 from application.models import Users, Tasks
 from application.forms import SignUpForm, LoginForm
+
+
+
+login_manager = LoginManager()
+login_manager = init_app.py(app)
+login_manager.login_view = 'login'
+
+
 
 
 # Landing page
@@ -15,26 +25,32 @@ def index():
 def signup():
     form = SignUpForm()
 
-    if request.method == 'POST':
-        first_name = form.fname.data
-        surname = form.sname.data
-        username = form.username.data
-        email = form.email.data
-        password = form.password.data
-        
-
-        new_user = Users(first_name=first_name, surname=surname, username=username, email=email, password=password)
+    if form.validate_on_submit():
+        hashed_password = generate_password_hash(form.password.data, method='sha256')
+        new_user = Users(first_name=form.fname.data, surname=form.sname.data, username=form.username.data, email=form.email.data, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
-        return redirect('/')
+
+        data = Users.query.all()
+        return render_template('TESTING.html', record=data) #Temporary solution to view user table in browser
+
     return render_template('signup.html', form=form)
 
 
 
 # Account login page
-@app.route('/login')
+@app.route('/login',  methods=["GET", "POST"])
 def login():
     form = LoginForm()
+
+    if form.validate_on_submit():
+        user = Users.query.filter_by(username=form.username.data).first()
+        if user:
+            if check_password_hash(user.password, form.password.data):
+                return redirect(url_for('dashboard'))
+
+        return '<h1>Invalid Username or Password</h1>'
+
     return render_template('login.html', form=form)
 
 
