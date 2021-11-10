@@ -16,6 +16,19 @@ title %}{% endblock %} {% block content %}
       <tr>
         <td>{{row.title}}</td>
         <td>{{row.content}}</td>
+        <td>
+          <button>
+            <a href="{{ url_for('edit_task', user_id=row.user_id) }}">Edit</a>
+          </button>
+        </td>
+
+        <td>
+          <button>
+            <a href="{{ url_for('delete_task', user_id=row.user_id) }}"
+              >Delete</a
+            >
+          </button>
+        </td>
       </tr>
       {% endfor %}
     </tbody>

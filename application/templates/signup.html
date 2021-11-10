@@ -16,9 +16,9 @@ title %}{% endblock %} {% block content %}
       wtf.form_field(form.email) }} {{ wtf.form_field(form.password) }} {{
       wtf.form_field(form.confirm) }}
       <center>
-        <a class="btn btn-light" role="button"
-          >{{ wtf.form_field(form.submit) }}</a
-        >
+        <button class="btn btn-lg btn-primary btn-block" role="button">
+          {{ wtf.form_field(form.submit) }}
+        </button>
       </center>
     </div>
   </form>
