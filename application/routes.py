@@ -1,23 +1,19 @@
 from flask import render_template, request, redirect
 from application import app, db
 from application.models import Users, Tasks
-from application.forms import SignUp, Login
+from application.forms import SignUpForm, LoginForm
 
 
 # Landing page
 @app.route('/')
-def homepage():
+def index():
     return render_template('index.html')
 
 
-# @app.route('/user/<name>')
-# def user(name):
-#     return render_template("index.html", name=name)
-
 # Account sign up page
 @app.route('/signup',  methods=["GET", "POST"])
-def sign_up():
-    form = SignUp()
+def signup():
+    form = SignUpForm()
 
     if request.method == 'POST':
         first_name = form.fname.data
@@ -32,6 +28,21 @@ def sign_up():
         db.session.commit()
         return redirect('/')
     return render_template('signup.html', form=form)
+
+
+
+# Account login page
+@app.route('/login')
+def login():
+    form = LoginForm()
+    return render_template('login.html', form=form)
+
+
+# User dashboard
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
+    
 
 
 

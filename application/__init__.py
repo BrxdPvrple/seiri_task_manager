@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_bootstrap import Bootstrap
 from os import getenv
 import pymysql
 
@@ -10,6 +11,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = getenv("DB_URI")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = getenv('secretkey')
 db = SQLAlchemy(app)
+
+# Instantiate Bootstrap
+Bootstrap(app)
 
 
 import application.models
