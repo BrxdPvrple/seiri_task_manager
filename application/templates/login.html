@@ -1,20 +1,18 @@
-{% extends "base.html" %} 
-{% import "bootstrap/wtf.html" as wtf %}
-
-
-{% block content %}
-
+{% extends "base.html" %} {% import "bootstrap/wtf.html" as wtf %} {% block
+content %}
 
 <div class="header"><h1>Login</h1></div>
 
 <div class="container">
   <form action="{{ url_for('login') }}" method="POST">
     <div class="form-group">
-      {{ form.hidden_tag() }} 
-      {{ wtf.form_field(form.username) }}
-      <br>
-      {{ wtf.form_field(form.password) }}
-      {{ wtf.form_field(form.remember) }}
+      {{ form.hidden_tag() }} {{ wtf.form_field(form.username) }}
+      <br />
+      {{ wtf.form_field(form.password) }} {{ wtf.form_field(form.remember) }}
+      <br />
+      <button class="btn btn-lg btn-primary btn-block" type="submit">
+        Sign in
+      </button>
     </div>
   </form>
 </div>

@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% import "bootstrap/wtf.html" as wtf %} {% block
+content %}
+
+<div class="header"><h1>YOU ARE LOGGED IN</h1></div>
+
+<form action="{{ url_for('logout') }}">
+  <input type="submit" value="Logout" />
+</form>
+
+{% endblock %}

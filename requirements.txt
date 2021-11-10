@@ -2,10 +2,10 @@ flask
 flask_sqlalchemy
 flask_wtf
 wtforms
+flask_login
 flask_testing
-pymysql
-flask-bcrypt
+flask-bootstrap
 cryptography
+pymysql
 pytest
 pytest-cov
-flask-bootstrap
