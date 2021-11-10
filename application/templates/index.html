@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+<style type="text/css">
+    .important {
+        color: #573399;
+    }
+</style>
+{% endblock %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<!-- Header and welcome message -->
+<div class="header">
+    <h1>Welcome to Seiri 整理</h1>
+    <p>
+        Get on track and organize your life today!
+    </p>
+</div>
+
+<div class="button">
+    <a class="btn btn-primary" href="{{ url_for('signup') }}" role="button">Sign Up Here!</a>
+</div>
+
+
+{% endblock %}

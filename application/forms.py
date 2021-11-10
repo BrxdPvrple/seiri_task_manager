@@ -1,18 +1,20 @@
 from flask_wtf import FlaskForm
-from wtforms import IntegerField, StringField, SelectField, SubmitField
+from wtforms import IntegerField, StringField, PasswordField, BooleanField, SubmitField
+from wtforms.validators import InputRequired, Email, Length
 
-class AddEmp(FlaskForm):
-    name = StringField("Name")
-    salary = IntegerField("Salary")
-    marks = IntegerField("Marks")
-    subject = SelectField("Subject", choices=[('Python', 'Python'), ('Java', 'Java'), ('Javascript','Javascript'), ('C++', 'C++')])
-    dept = SelectField('Department', choices=[('Front End', 'Front End'), ('Back End', 'Back End'), ('Devops', 'DevOps'), ('Lead Dev', 'Lead Dev')])
-    submit = SubmitField('Add Employee')
 
-class UpdateEmp(FlaskForm):
-    name = StringField("Name")
-    salary = IntegerField("Salary")
-    marks = IntegerField("Marks")
-    subject = SelectField("Subject", choices=[('Python', 'Python'), ('Java', 'Java'), ('Javascript','Javascript'), ('C++', 'C++')])
-    dept = SelectField('Department', choices=[('Front End', 'Front End'), ('Back End', 'Back End'), ('Devops', 'DevOps'), ('Lead Dev', 'Lead Dev')])
-    submit = SubmitField('Update Employee')
+class SignUpForm(FlaskForm):
+    fname = StringField("First Name", validators=[InputRequired(), Length(max=20)])
+    sname = StringField("Surname", validators=[InputRequired(), Length(max=20)])
+    username = StringField("Username", validators=[InputRequired(), Length(min=4, max=15)])
+    email = StringField("Email", validators=[InputRequired(), Length(max=50)])
+    password = StringField("Password", validators=[InputRequired(), Length(min=8, max=80)])
+    confirm = StringField("Confirm Password", validators=[InputRequired(), Length(min=8, max=80)])
+    submit = SubmitField("Submit")
+
+class LoginForm(FlaskForm):
+    username = StringField("Username", validators=[InputRequired(), Length(min=4, max=15)])
+    password = StringField("Password", validators=[InputRequired(), Length(min=8, max=80)])
+    remember = BooleanField('Remember Me')
+
+
