@@ -12,3 +12,39 @@
   text-align: center;
   padding-top: 10px;
 }
+
+.form-group {
+  background-color: #7dbfdd;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+.container {
+  width: 52%;
+}
+
+.form-style {
+  color: white;
+}
+
+.main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 40px;
+  align-items: center;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ches {
+  display: flex;
+  justify-content: center;
+  max-width: 120px;
+}

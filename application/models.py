@@ -16,8 +16,6 @@ class Users(UserMixin, db.Model):
 class Tasks(db.Model):
     id = db.Column(db.Integer, primary_key=True, nullable=False) # Task ID
     content = db.Column(db.VARCHAR(255)) # Task Content
+    title = db.Column(db.VARCHAR(20)) # Task Name
 
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
-
-# db.drop_all()
-db.create_all()

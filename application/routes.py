@@ -38,10 +38,10 @@ def signup():
         db.session.add(new_user)
         db.session.commit()
 
-        return render_template('login.html', form=form)
+        # return render_template('login.html', form=form)
 
-        # data = Users.query.all()
-        # return render_template('TESTING.html', record=data) #Temporary solution to view user table in browser
+        data = Users.query.all()
+        return render_template('TESTING.html', record=data) #Temporary solution to view user table in browser
 
     return render_template('signup.html', form=form)
 
@@ -78,12 +78,14 @@ def dashboard():
 @app.route('/logout')
 @login_required
 def logout():
+    logout_user()
     return render_template('index.html')
     
 
 
 # Manage account details
 @app.route('/manage_account')
+@login_required
 def account():
     return render_template('account.html')
 
@@ -92,7 +94,9 @@ def account():
 
 # Tasks overview and general user area
 @app.route('/task_overview')
+@login_required
 def show_tasks():
+
     return render_template('task_manager.html')
 
 
@@ -101,7 +105,9 @@ def show_tasks():
 #Create a new task
 @app.route('/task_input')
 def new_task():
-    return render_template('new_task.html')
+
+    data = Tasks.query.all()
+    return render_template('new_task.html', record=data)
 
 
 

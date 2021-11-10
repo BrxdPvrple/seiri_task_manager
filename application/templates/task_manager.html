@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% import "bootstrap/wtf.html" as wtf %} {% block
+title %}{% endblock %} {% block content %}
+
+<div class="header">
+  <h1>Task Management Hub 整理</h1>
+</div>
+
+<div class="table">
+  <table border style="width: 50%" style="height: 700px">
+    <tr bgcolor="silver">
+      <th>Task Name</th>
+      <th>Task Description</th>
+    </tr>
+    <tbody>
+      {% for row in record %}
+      <tr>
+        <td>{{row.title}}</td>
+        <td>{{row.content}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<a class="btn btn-primary ches" href="{{ url_for('new_task') }}">Add Record</a>
+
+{% endblock %}
