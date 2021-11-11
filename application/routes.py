@@ -91,8 +91,8 @@ def logout():
 # Tasks overview and management page
 @app.route('/task_overview')
 @login_required
-def show_tasks(user_id):
-    data = Tasks.query.filter_by(user_id=user_id).first()
+def show_tasks():
+    data = Tasks.query.all()
     return render_template('task_manager.html', record=data)
 
 
@@ -119,12 +119,10 @@ def edit_task():
 
 
 # Delete tasks
-@app.route('/task_delete/<int:task_id>')
+@app.route('/task_delete')
 def delete_task():
-    task = Tasks.query.filter_by(task_id=task_id).first()
-    db.session.delete(task)
-    db.session.commit()
-    return redirect("/task_overview")
+    pass
+
 
 
 # ==============ACCOUNT MANAGEMENT==============
