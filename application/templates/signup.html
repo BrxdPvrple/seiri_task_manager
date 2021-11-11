@@ -1,41 +1,27 @@
-{% extends "base.html" %}
-{% import "bootstrap/wtf.html" as wtf %}
-
-
-{% block title %}{% endblock %}
-
-{% block content %}
+{% extends "base.html" %} {% import "bootstrap/wtf.html" as wtf %} {% block
+title %}{% endblock %} {% block content %}
 
 <!-- Header and welcome message -->
 <div class="header">
-    <h1>Welcome to Seiri 整理</h1>
-    <p>
-        Get on track and organize your life today!
-    </p>
+  <h1>Welcome to Seiri 整理</h1>
+  <p>Get on track and organize your life today!</p>
 </div>
-
 
 <!-- Sign up form -->
 <div class="container">
-    <form action="{{ url_for('signup') }}" method="POST">
-      <div class="form-group">
-        {{ form.hidden_tag() }} 
-        {{ wtf.form_field(form.fname) }}
-        <br>
-        {{ wtf.form_field(form.sname) }}
-        <br>
-        {{ wtf.form_field(form.username) }}
-        <br>
-        {{ wtf.form_field(form.email) }}
-        <br>
-        {{ wtf.form_field(form.password) }}
-        <br>
-        {{ wtf.form_field(form.confirm) }}
-        <br>
-        <a class="btn btn-primary"  role="button">{{ wtf.form_field(form.submit) }}</a>
-      </div>
-    </form>
-  </div>
-
+  <form action="{{ url_for('signup') }}" method="POST">
+    <div class="form-group">
+      {{ form.hidden_tag() }} {{ wtf.form_field(form.fname) }} {{
+      wtf.form_field(form.sname) }} {{ wtf.form_field(form.username) }} {{
+      wtf.form_field(form.email) }} {{ wtf.form_field(form.password) }} {{
+      wtf.form_field(form.confirm) }}
+      <center>
+        <button class="btn btn-lg btn-primary btn-block" role="button">
+          {{ wtf.form_field(form.submit) }}
+        </button>
+      </center>
+    </div>
+  </form>
+</div>
 
 {% endblock %}

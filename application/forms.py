@@ -10,7 +10,7 @@ class SignUpForm(FlaskForm):
     email = StringField("Email", validators=[InputRequired(), Length(max=50)])
     password = PasswordField("Password", validators=[InputRequired(), EqualTo('confirm', message='Passwords must be identical'), Length(min=8, max=80)])
     confirm = PasswordField("Confirm Password", validators=[InputRequired(), Length(min=8, max=80)])
-    submit = SubmitField("Submit")
+    submit = SubmitField("Sign Up Now!")
 
 class LoginForm(FlaskForm):
     username = StringField("Username", validators=[InputRequired(), Length(min=4, max=15)])
@@ -18,3 +18,7 @@ class LoginForm(FlaskForm):
     remember = BooleanField('Remember Me')
 
 
+class CreateTask(FlaskForm):
+    title = StringField("Title", validators=[InputRequired(), Length(min=1, max=20)])
+    content = StringField("Description", validators=[InputRequired(), Length(min=1, max=255)])
+    submit = SubmitField("Add Task")

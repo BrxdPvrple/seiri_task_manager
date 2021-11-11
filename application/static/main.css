@@ -12,3 +12,50 @@
   text-align: center;
   padding-top: 10px;
 }
+
+.form-group {
+  background-color: #7dbfdd;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+.container {
+  width: 52%;
+}
+
+.form-style {
+  color: white;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 40px;
+  align-items: center;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #573399;
+  background-color: #7dbfdd;
+}
+
+.ches {
+  display: flex;
+  justify-content: center;
+  max-width: 120px;
+}
+
+.btn {
+  color: aliceblue;
+}
+
+.sign-in {
+  width: 120px;
+  height: 50px;
+}
