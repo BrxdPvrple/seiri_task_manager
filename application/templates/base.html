@@ -52,6 +52,18 @@
 
           <!-- NAVBAR  -->
           <nav class="navbar navbar-light">
+            {% if current_user.is_authenticated %}
+            <a class="navbar-brand" href="/dashboard">
+              <img
+                src="https://fontmeme.com/permalink/211029/a385aec4243164355c869497c2c9b8c3.png"
+                alt="japanese"
+                border="0"
+                width="30"
+                height="30"
+                alt=""
+              />Seiri</a
+            >
+            {% else %}
             <a class="navbar-brand" href="/">
               <img
                 src="https://fontmeme.com/permalink/211029/a385aec4243164355c869497c2c9b8c3.png"
@@ -62,6 +74,7 @@
                 alt=""
               />Seiri</a
             >
+            {% endif %}
           </nav>
 
           <ul
@@ -89,15 +102,19 @@
 
           <!-- NAVBAR RIGHT HAND SIDE: LOGIN/LOGOUT FUNCTIONALITY -->
           <ul class="nav navbar-nav navbar-right">
-            {% if session['logged_in'] == True %}
+            {% if current_user.is_authenticated %}
             <li>
-              <a href="/logout"
-                >Logout <span class="sr-only">(current)</span></a
-              >
+              <a
+                class="btn btn-lg btn-primary login-out edit-delete"
+                href="/logout"
+                >Logout <span class="sr-only"></span
+              ></a>
             </li>
             {% else %}
             <li>
-              <a href="/login">Login <span class="sr-only">(current)</span></a>
+              <a class="btn btn-lg btn-primary login-out" href="/login"
+                >Login <span class="sr-only"></span
+              ></a>
             </li>
             {% endif %}
           </ul>

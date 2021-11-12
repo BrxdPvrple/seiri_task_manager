@@ -3,10 +3,23 @@ content %}
 
 <div class="header">
   <h1>Hello {{current_user.username|title}}, you are now logged in.</h1>
+  <br />
+  <h2>Welcome to Seiri 整理</h2>
 </div>
+<br />
 
-<form action="{{ url_for('logout') }}">
-  <input type="submit" value="Logout" />
-</form>
+<div class="paragraph">
+  <h3>Let's Get Started!</h3>
+
+  <h5>
+    Here's how it works. <br />
+    Head to the tasks tab in the navigation bar above.
+    <br /><br />
+
+    <img src="../static/Getting_Started.png" /> <br /><br />
+
+    From there you can begin adding tasks and managing them as you see fit.
+  </h5>
+</div>
 
 {% endblock %}
