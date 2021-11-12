@@ -26,8 +26,8 @@ def index():
 
 # Manage logins
 @login_manager.user_loader
-def load_user(user_id):
-    return Users.query.get(int(user_id))
+def load_user(id):
+    return Users.query.get(int(id))
 
 
 
@@ -69,6 +69,7 @@ def login():
 @app.route('/dashboard')
 @login_required
 def dashboard():
+    # return render_template('DEBUGGING.html')
     return render_template('dashboard.html')
 
 
@@ -92,7 +93,7 @@ def logout():
 @app.route('/task_overview')
 @login_required
 def show_tasks():
-    data = Tasks.query.all()
+    data = Tasks.query.filter_by(user_id=current_user.id).all()
     return render_template('task_manager.html', record=data)
 
 
@@ -104,7 +105,7 @@ def new_task():
     form = CreateTask()
    
     if request.method == 'POST':
-        new_task = Tasks(title=form.title.data,content=form.content.data)
+        new_task = Tasks(title=form.title.data,content=form.content.data, user_id=current_user.id)
         db.session.add(new_task)
         db.session.commit()
         return redirect('/task_overview')

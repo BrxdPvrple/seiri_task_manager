@@ -20,3 +20,7 @@ class Tasks(db.Model):
     
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
 
+
+# db.drop_all()
+db.create_all()
+
