@@ -20,8 +20,8 @@ title %}{% endblock %} {% block content %}
         <td>{{row.content}}</td>
         <td>
           <a
-            class="btn btn-lg btn-primary btn-sm edit-delete"
-            href="{{ url_for('edit_task', tid=row.tid) }}"
+            class="btn btn-lg btn-primary btn-sm"
+            href="{{ url_for('edit_task', task_id=row.task_id) }}"
             role="button"
           >
             Edit
@@ -30,8 +30,8 @@ title %}{% endblock %} {% block content %}
 
         <td>
           <a
-            class="btn btn-lg btn-primary btn-sm edit-delete"
-            href="{{ url_for('delete_task', tid=row.tid) }}"
+            class="btn btn-lg btn-primary btn-sm"
+            href="{{ url_for('delete_task', task_id=row.task_id) }}"
             role="button"
           >
             Delete
@@ -43,6 +43,6 @@ title %}{% endblock %} {% block content %}
   </table>
 </div>
 
-<a class="btn btn-primary ches" href="{{ url_for('new_task') }}">Add Record</a>
+<a class="btn btn-primary ches" href="{{ url_for('new_task') }}">New Task</a>
 
 {% endblock %}

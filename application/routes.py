@@ -112,10 +112,10 @@ def new_task():
 
 
 # Edit tasks
-@app.route('/task_update/<int:tid>', methods=["GET", "POST"])
-def edit_task(tid):
+@app.route('/task_update/<int:task_id>', methods=["GET", "POST"])
+def edit_task(task_id):
     form = EditTask()
-    task = Tasks.query.filter_by(tid=tid).first()
+    task = Tasks.query.filter_by(task_id=task_id).first()
     if request.method == 'POST':
         task.title = form.title.data
         task.content = form.content.data
@@ -128,9 +128,9 @@ def edit_task(tid):
 # NEED TO IMPLEMENT SESSIONS TO ADDRESS ISSUE WITH CIRCUMVENTING LOGIN MANAGEMENT VIA URL
 
 # Delete tasks
-@app.route('/task_delete/<int:tid>')
-def delete_task(tid):
-    task = Tasks.query.filter_by(tid=tid).first()
+@app.route('/task_delete/<int:task_id>')
+def delete_task(task_id):
+    task = Tasks.query.filter_by(task_id=task_id).first()
     db.session.delete(task)
     db.session.commit()
     return redirect('/task_overview')

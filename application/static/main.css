@@ -62,6 +62,12 @@
   height: 50px;
 }
 
-.edit-delete {
-  color: aliceblue;
+.login-out {
+  font-size: medium;
+  margin-right: 50px;
+}
+
+.back {
+  margin-top: 20px;
+  width: 80px;
 }
