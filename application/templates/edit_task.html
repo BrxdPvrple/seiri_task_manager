@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% import "bootstrap/wtf.html" as wtf %} {% block
+title %}{% endblock %} {% block content %}
+
+<div class="header">
+  <h1>Task Management Hub 整理</h1>
+</div>
+
+<div class="form-group add-task">
+  <form action="" method="POST">
+    {{ form.hidden_tag() }} {{ form.title.label }} {{ form.title }} {{
+    form.content.label }} {{ form.content }}
+    <button class="btn btn-primary btn-sm" role="button">
+      {{ wtf.form_field(form.submit) }}
+    </button>
+  </form>
+</div>
+
+{% endblock %}

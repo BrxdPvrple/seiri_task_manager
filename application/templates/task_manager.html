@@ -10,8 +10,8 @@ title %}{% endblock %} {% block content %}
     <tr style="background-color: aliceblue">
       <th>Task Name</th>
       <th>Task Description</th>
-      <th></th>
-      <th></th>
+      <th>Edit</th>
+      <th>Delete</th>
     </tr>
     <tbody>
       {% for row in record %}
@@ -19,23 +19,23 @@ title %}{% endblock %} {% block content %}
         <td>{{row.title}}</td>
         <td>{{row.content}}</td>
         <td>
-          <button
+          <a
             class="btn btn-lg btn-primary btn-sm edit-delete"
-            href="{{ url_for('edit_task', user_id=row.user_id) }}"
+            href="{{ url_for('edit_task', tid=row.tid) }}"
             role="button"
           >
             Edit
-          </button>
+          </a>
         </td>
 
         <td>
-          <button
+          <a
             class="btn btn-lg btn-primary btn-sm edit-delete"
-            href="{{ url_for('delete_task', user_id=row.user_id) }}"
+            href="{{ url_for('delete_task', tid=row.tid) }}"
             role="button"
           >
             Delete
-          </button>
+          </a>
         </td>
       </tr>
       {% endfor %}
