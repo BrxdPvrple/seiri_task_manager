@@ -145,3 +145,4 @@ def delete_task(tid):
 @login_required
 def account():
     return render_template('account.html')   
+
