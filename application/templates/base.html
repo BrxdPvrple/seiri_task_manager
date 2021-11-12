@@ -52,6 +52,18 @@
 
           <!-- NAVBAR  -->
           <nav class="navbar navbar-light">
+            {% if current_user.is_authenticated %}
+            <a class="navbar-brand" href="/dashboard">
+              <img
+                src="https://fontmeme.com/permalink/211029/a385aec4243164355c869497c2c9b8c3.png"
+                alt="japanese"
+                border="0"
+                width="30"
+                height="30"
+                alt=""
+              />Seiri</a
+            >
+            {% else %}
             <a class="navbar-brand" href="/">
               <img
                 src="https://fontmeme.com/permalink/211029/a385aec4243164355c869497c2c9b8c3.png"
@@ -62,6 +74,7 @@
                 alt=""
               />Seiri</a
             >
+            {% endif %}
           </nav>
 
           <ul
