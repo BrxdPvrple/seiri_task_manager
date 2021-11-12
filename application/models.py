@@ -21,6 +21,6 @@ class Tasks(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
 
 
-# db.drop_all()
+# db.drop_all() # Temporary until app goes live
 db.create_all()
 

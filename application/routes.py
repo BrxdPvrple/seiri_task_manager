@@ -125,6 +125,7 @@ def edit_task(tid):
 
     return render_template('edit_task.html', form=form, record=task)
 
+# NEED TO IMPLEMENT SESSIONS TO ADDRESS ISSUE WITH CIRCUMVENTING LOGIN MANAGEMENT VIA URL
 
 # Delete tasks
 @app.route('/task_delete/<int:tid>')
@@ -133,6 +134,8 @@ def delete_task(tid):
     db.session.delete(task)
     db.session.commit()
     return redirect('/task_overview')
+
+# NEED TO IMPLEMENT SESSIONS TO ADDRESS ISSUE WITH CIRCUMVENTING LOGIN MANAGEMENT VIA URL
 
 
 
