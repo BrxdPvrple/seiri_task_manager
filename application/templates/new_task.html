@@ -5,7 +5,7 @@ title %}{% endblock %} {% block content %}
   <h1>Task Management Hub 整理</h1>
 </div>
 
-<div class="form-group">
+<div class="form-group add-task">
   <form action="{{ url_for('new_task') }}" method="POST">
     {{ form.hidden_tag() }} {{ form.title.label }} {{ form.title }} {{
     form.content.label }} {{ form.content }} {{ form.submit }}
