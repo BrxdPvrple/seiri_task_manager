@@ -3,7 +3,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from application import app, db
 from application.models import Users, Tasks
-from application.forms import SignUpForm, LoginForm, CreateTask
+from application.forms import SignUpForm, LoginForm, CreateTask, EditTask
 
 
 login_manager = LoginManager()
@@ -26,8 +26,8 @@ def index():
 
 # Manage logins
 @login_manager.user_loader
-def load_user(id):
-    return Users.query.get(int(id))
+def load_user(user_id):
+    return Users.query.get(int(user_id))
 
 
 
@@ -69,7 +69,6 @@ def login():
 @app.route('/dashboard')
 @login_required
 def dashboard():
-    # return render_template('DEBUGGING.html')
     return render_template('dashboard.html')
 
 
@@ -98,7 +97,6 @@ def show_tasks():
 
 
 
-
 #Create a new task
 @app.route('/task_input', methods=["GET", "POST"])
 def new_task():
@@ -114,15 +112,30 @@ def new_task():
 
 
 # Edit tasks
-@app.route('/task_update')
-def edit_task():
-    return render_template('edit_task.html')
+@app.route('/task_update/<int:tid>', methods=["GET", "POST"])
+def edit_task(tid):
+    form = EditTask()
+    task = Tasks.query.filter_by(tid=tid).first()
+    if request.method == 'POST':
+        task.title = form.title.data
+        task.content = form.content.data
+        form.process()
+        db.session.commit()
+        return redirect('/task_overview')
 
+    return render_template('edit_task.html', form=form, record=task)
+
+# NEED TO IMPLEMENT SESSIONS TO ADDRESS ISSUE WITH CIRCUMVENTING LOGIN MANAGEMENT VIA URL
 
 # Delete tasks
-@app.route('/task_delete')
-def delete_task():
-    pass
+@app.route('/task_delete/<int:tid>')
+def delete_task(tid):
+    task = Tasks.query.filter_by(tid=tid).first()
+    db.session.delete(task)
+    db.session.commit()
+    return redirect('/task_overview')
+
+# NEED TO IMPLEMENT SESSIONS TO ADDRESS ISSUE WITH CIRCUMVENTING LOGIN MANAGEMENT VIA URL
 
 
 
@@ -135,3 +148,4 @@ def delete_task():
 @login_required
 def account():
     return render_template('account.html')   
+

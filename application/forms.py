@@ -22,3 +22,8 @@ class CreateTask(FlaskForm):
     title = StringField("Title", validators=[InputRequired(), Length(min=1, max=20)])
     content = StringField("Description", validators=[InputRequired(), Length(min=1, max=255)])
     submit = SubmitField("Add Task")
+
+class EditTask(FlaskForm):
+    title = StringField("Title", validators=[InputRequired(), Length(min=1, max=20)])
+    content = StringField("Description", validators=[InputRequired(), Length(min=1, max=255)])
+    submit = SubmitField("Update Task")
