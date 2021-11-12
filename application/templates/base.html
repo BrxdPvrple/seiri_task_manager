@@ -17,7 +17,15 @@
     {% endblock %}
   </head>
 
-  <body>
+  <body
+    style="
+      background-image: url('https://www.artmajeur.com/medias/standard/g/r/graham-edward/artwork/10990294_maries.jpg');
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    "
+  >
     <div class="b-example-divider"></div>
 
     <header class="p-3 mb-3 border-bottom">
@@ -51,7 +59,7 @@
           </a>
 
           <!-- NAVBAR  -->
-          <nav class="navbar navbar-light">
+          <nav class="navbar navbar-dark">
             {% if current_user.is_authenticated %}
             <a class="navbar-brand" href="/dashboard">
               <img
@@ -88,13 +96,17 @@
             "
           >
             <li>
-              <a href="/dashboard" class="nav-link px-2 link-dark">Dashboard</a>
+              <a href="/dashboard" class="nav-link px-2 link-light"
+                >Dashboard</a
+              >
             </li>
             <li>
-              <a href="/task_overview" class="nav-link px-2 link-dark">Tasks</a>
+              <a href="/task_overview" class="nav-link px-2 link-light"
+                >Tasks</a
+              >
             </li>
             <li>
-              <a href="/manage_account" class="nav-link px-2 link-dark"
+              <a href="/manage_account" class="nav-link px-2 link-light"
                 >Account</a
               >
             </li>
