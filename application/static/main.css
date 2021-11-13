@@ -1,5 +1,5 @@
 .header {
-  color: #573399;
+  color: #301169;
   text-align: center;
 }
 
@@ -14,9 +14,10 @@
 }
 
 .form-group {
-  background-color: #7dbfdd;
+  background-color: #c4aeec;
   border-radius: 3px;
   padding: 8px;
+  font-weight: bold;
 }
 
 .container {
@@ -41,7 +42,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #573399;
+  color: white;
+  padding-top: 30px;
 }
 
 .ches {
@@ -82,5 +84,11 @@
 }
 
 .signup {
-  padding-top: 10px;
+  padding-top: 15px;
+  font-weight: bold;
+  color: #301169;
+}
+
+.org {
+  font-weight: bold;
 }
