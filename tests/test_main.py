@@ -3,12 +3,12 @@ from flask_testing import TestCase
 from application import app, db
 from application.models import Users, Tasks
 
-# =========== 12 TEST CASES NEEDED ============
+# =========== 10 TEST CASES NEEDED ============
 
 
 class TestBase(TestCase):
     
-    # Creates config for testing
+    # Creates for testing
     def create_app(self):
         app.config.update(
             SQLALCHEMY_DATABASE_URI='sqlite:///test.db',
@@ -110,7 +110,7 @@ class TestViews(TestBase):
   
 
     def test_edit_task(self):
-        response = self.client.post(url_for('edit_task'),
+        response = self.client.post('/task_update/<int:task_id>',
         data = dict(title='Change Song', content='The song is now called Do You Remember The Time'),
         follow_redirects = True
         )
@@ -121,7 +121,7 @@ class TestViews(TestBase):
     
     def test_delete_task(self):
         with self.client:
-            response = self.client.delete(url_for('delete_task'),
+            response = self.client.delete('/task_delete/<int:task_id>',
             data = dict(title='School Run', content='We need to drop the kids off at school today at 8am.'),
             follow_redirects = True
             )
