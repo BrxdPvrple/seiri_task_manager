@@ -30,7 +30,8 @@ I later expanded upon this SRS by creating a more in depth product requirements 
 ![STM2](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451-2.jpg)
 ![STM3](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451-3.jpg)
 
-The product requirements can be viewed in full [here](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451.pdf).
+The product requirements can be viewed in full [here](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451.pdf)
+
 
 ## Application Design
 
@@ -86,6 +87,7 @@ To plan my project I made use of Jira's scrum boards, to create the application 
 
 ![Jira](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Sprint%20Overview.png)
 ![Jira2](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Sprint%20Roadmap%20%26%20Insights.png)
+![Jira3](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Burndown%20Chart.png)
 
 To keep production seamless I used github webhooks to keep Jenkins and Github integrated and allow for automatic builds to happen upon pushing commits. I also used smart commits to update my Jira sprint.
 
