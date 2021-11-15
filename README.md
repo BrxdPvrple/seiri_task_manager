@@ -45,8 +45,9 @@ Seiri is a task manager app created using the flask framework and written in pyt
   - Logo href used to always redired to landing page, now redirected to dashboard when logged in.
 
 - 13/11/2021:
-  - Changed background and colour scheme.
-    ![current state](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Tasks_Final.png)
+  - Changed background and improved styling.
+    ![before](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Task%20Management%20Hub.png)
+    ![after](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Tasks_Final.png)
 
 ## Known Issues
 
