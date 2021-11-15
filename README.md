@@ -79,6 +79,20 @@ Upon connecting to the site the home page provides you with a button to sign up,
 
 ## Tech Stack
 
+To plan my project I made use of Jira's scrum boards, to create the application I used Python & Flask whilst Github was my choice of version control system. Google Cloud is the deployment server and for continous integration I used Jenkins.
+
+![Stack](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Stack.png)
+
+#### Jira Sprint
+
+![Jira](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Sprint%20Overview.png)
+![Jira2](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Sprint%20Roadmap%20%26%20Insights.png)
+
+To keep production seamless I used github webhooks to keep Jenkins and Github integrated and allow for automatic builds to happen upon pushing commits. I also used smart commits to update my Jira sprint.
+
+![Github](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Github.png)
+![Jenkins](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Jenkins.png)
+
 ## Testing
 
 ## Risk Assessment
