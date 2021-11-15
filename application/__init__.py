@@ -14,8 +14,8 @@ Bootstrap(app)
 csrf = CSRFProtect(app)
 
 #Initialize database
-# app.config['SQLALCHEMY_DATABASE_URI'] = getenv("DB_URI")
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db' 
+app.config['SQLALCHEMY_DATABASE_URI'] = getenv("DB_URI")
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db' # Database for offline testing
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = getenv('secretkey')
 db = SQLAlchemy(app)
