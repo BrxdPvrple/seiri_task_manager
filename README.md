@@ -5,7 +5,8 @@ Seiri is a task manager app created using the flask framework and written in pyt
 ## Contents:
 
 - [Project Brief](#Project-Brief)
-- [Application Design](#Application-Design)
+- [Product Requirements](#Product-Requirements)
+- [App Design](#Appl-Design)
 - [Application](#Application)
 - [Risk Assessment](#Risk-Assessment)
 - [Testing](#Testing)
@@ -16,7 +17,13 @@ Seiri is a task manager app created using the flask framework and written in pyt
 
 ## Project Brief
 
+The aim of this project was to create a CRUD web application written in python and using the Flask web microframework. The web application also requires a database with at least two tables showing a one-to-many relationship. This application then needed to be deployed to a cloud server and continuous integration is needed to display knowledge of core DevOps principles and agile methodologies.
+
 ## Product Requirements
+
+![STM1]()
+![STM2]()
+![STM3]()
 
 ## Application Design
 
@@ -44,7 +51,6 @@ Seiri is a task manager app created using the flask framework and written in pyt
 
   - Logo href used to always redired to landing page, now redirected to dashboard when logged in.
 
-- 13/11/2021:
   - Changed background and improved styling.
     ![before](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Task%20Management%20Hub.png)
     ![after](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Tasks_Final.png)
@@ -52,16 +58,18 @@ Seiri is a task manager app created using the flask framework and written in pyt
 ## Known Issues
 
 - Able to edit and delete tasks from other accounts if task id is known by manipulating the url.
+- Passwords currently unsafe via HTTP and require HTTPS for end to end encryption.
 - Edit tasks function doesn't prefill text with current task name and description.
 - Not yet optimized for mobile browsers.
 - Stack trace error is thrown when tyring to enter duplicate details; needs try/except statements to catch erros and prompt users to input a new username or email.
 
 ## Future Development
 
+- Include an SSL Certificate for HTTPS.
 - Add a footer to layout.html.
 - Improve the dashboard.
-- Implement a dark mode feature
-- Flash messaging for login/logout and tasks deleted
-- Add completion dates and check boxes to tasks
-- New table for completed tasks
-- Add account management to allow users to change username/email/password and delete account
+- Implement a dark mode feature.
+- Flash messaging for login/logout and tasks deleted.
+- Add completion dates and check boxes to tasks.
+- New table for completed tasks.
+- Add account management to allow users to change username/email/password and delete account.

@@ -93,11 +93,11 @@ class TestViews(TestBase):
 
 
     def test_show_tasks(self):
-        print('Current User: ', current_user.first_name, current_user.id)
         with self.client:
             response = self.client.get(url_for('show_tasks'))
             self.assertEqual(response.status_code, 200)
             self.assertIn(b'Task Management Hub', response.data)
+
 
 
 
