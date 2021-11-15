@@ -30,7 +30,8 @@ I later expanded upon this SRS by creating a more in depth product requirements 
 ![STM2](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451-2.jpg)
 ![STM3](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451-3.jpg)
 
-[STM](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451.pdf)
+The product requirements can be viewed in full here.
+[Product Requitements PDF](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451.pdf)
 
 ## Application Design
 
@@ -38,11 +39,43 @@ For my project I decided to create a task manager app that allows users to input
 
 ![ERD](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Entity%20Relationship%20Diagram.png)
 
-Website Navigation Structure
+Upon connecting to the site the home page provides you with a button to sign up, at this stage all other links will redirect you to the login page and the Logo redirects you back to the homepage. Upon creating an account you will then be able to login and the apps features now become accesible to the user. The website navigation structure is illustrated below.
 
 ![Webpages](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Webpage%20Flow%20Chart.png)
 
 ## Application
+
+#### Landing Page
+
+![Landing]()
+
+#### Sign Up Form
+
+![Signup]()
+
+#### Login Form
+
+![Login]()
+
+#### Dashboard
+
+![Dashboard]()
+
+#### Task Management Hub
+
+![Tasks]()
+
+#### Adding a Task
+
+![Add]()
+
+#### Updating a Task
+
+![Edit]()
+
+#### Account Management Hub
+
+![Accounts]()
 
 ## Tech Stack
 
