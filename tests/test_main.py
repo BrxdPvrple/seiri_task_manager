@@ -1,5 +1,6 @@
 from flask import url_for
 from flask_testing import TestCase
+from flask_login import current_user
 from application import app, db
 from application.models import Users, Tasks
 
@@ -26,11 +27,12 @@ class TestBase(TestCase):
 
         sample_user = Users(first_name='John', surname='Smith', username='SmithyBoy', email='jsmith@email.com', password='testpassword1')
         sample_task = Tasks(title='School Run', content='We need to drop the kids off at school today at 8am.')
-
+        
         db.session.add(sample_user, sample_task)
         db.session.commit()
 
 
+        print('Sample User: ', sample_user.id)
     # Deletes tables 
     def tearDown(self):
 
@@ -91,21 +93,24 @@ class TestViews(TestBase):
 
 
     def test_show_tasks(self):
-        response = self.client.get(url_for('show_tasks'))
-        self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Task Management Hub', response.data)
+        print('Current User: ', current_user.first_name, current_user.id)
+        with self.client:
+            response = self.client.get(url_for('show_tasks'))
+            self.assertEqual(response.status_code, 200)
+            self.assertIn(b'Task Management Hub', response.data)
 
 
 
 
 
-    def test_new_task(self):
-        response = self.client.post(url_for('new_task'),
-        data = dict(title='Write Song', content='I need to write a song about a girl named Billie Jean'),
-        follow_redirects = True
-        )
-
-
+    # def test_new_task(self):
+    #     with self.client:
+    #         response = self.client.post(url_for('new_task'),
+    #         data = dict(title='Write Song', content='I need to write a song about a girl named Billie Jean'),
+    #         follow_redirects = True
+    #         )
+        
+    #     self.assertTrue(current_user.id == 1)
 
   
 
@@ -134,4 +139,7 @@ class TestViews(TestBase):
         response = self.client.get(url_for('account'))
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Coming Soon...', response.data)
+
+
+
 
