@@ -30,11 +30,15 @@ I later expanded upon this SRS by creating a more in depth product requirements 
 ![STM2](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451-2.jpg)
 ![STM3](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451-3.jpg)
 
+[STM](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451.pdf)
+
 ## Application Design
 
 For my project I decided to create a task manager app that allows users to input new tasks, edit and delete them (CRUD functionality). The app utilises a SQL database with two tables that share a one-to-many relationship as illustrated in the entity relashionship diagram below.
 
 ![ERD](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Entity%20Relationship%20Diagram.png)
+
+Website Navigation Structure
 
 ![Webpages](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Webpage%20Flow%20Chart.png)
 
