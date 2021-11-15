@@ -30,8 +30,7 @@ I later expanded upon this SRS by creating a more in depth product requirements 
 ![STM2](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451-2.jpg)
 ![STM3](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451-3.jpg)
 
-The product requirements can be viewed in full here.
-[Product Requitements PDF](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451.pdf)
+The product requirements can be viewed in full [here](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451.pdf).
 
 ## Application Design
 
