@@ -4,6 +4,7 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from application import app, db
 from application.models import Users, Tasks
 from application.forms import SignUpForm, LoginForm, CreateTask, EditTask
+from flask_wtf.csrf import CSRFProtect
 
 
 login_manager = LoginManager()
