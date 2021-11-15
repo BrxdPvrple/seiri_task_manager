@@ -23,86 +23,86 @@ The aim of this project was to create a CRUD web application written in python a
 
 During the pre-planning stages of my project I wrote up a very brief software requirements specification before any actual development began.
 
-![SRS](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/SRS%20Screenshot.png)
+![SRS](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/SRS%20Screenshot.png)
 
 I later expanded upon this SRS by creating a more in depth product requirements document using the project pages feature on Jira.
-![STM1](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451-1.jpg)
-![STM2](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451-2.jpg)
-![STM3](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451-3.jpg)
+![STM1](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/STM-2021-11-08Productrequirements-131121-1451-1.jpg)
+![STM2](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/STM-2021-11-08Productrequirements-131121-1451-2.jpg)
+![STM3](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/STM-2021-11-08Productrequirements-131121-1451-3.jpg)
 
-The product requirements can be viewed in full [here](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451.pdf)
+The product requirements can be viewed in full [here](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/STM-2021-11-08Productrequirements-131121-1451.pdf)
 
 
 ## Application Design
 
 For my project I decided to create a task manager app that allows users to input new tasks, edit and delete them (CRUD functionality). The app utilises a SQL database with two tables that share a one-to-many relationship as illustrated in the entity relationship diagram below.
 
-![ERD](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Entity%20Relationship%20Diagram.png)
+![ERD](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Entity%20Relationship%20Diagram.png)
 
 Upon connecting to the site the home page provides you with a button to sign up, at this stage all other links will redirect you to the login page and the Logo redirects you back to the homepage. Upon creating an account you will then be able to login and the apps features now become accesible to the user. The website navigation structure is illustrated below.
 
-![Webpages](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Webpage%20Flow%20Chart.png)
+![Webpages](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Webpage%20Flow%20Chart.png)
 
 ## Application
 
 #### Landing Page
 
-![Landing](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Landing.png)
+![Landing](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Landing.png)
 
 #### Sign Up Form
 
-![Signup](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Signup_Final.png)
+![Signup](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Signup_Final.png)
 
 #### Login Form
 
-![Login](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Login_Final.png)
+![Login](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Login_Final.png)
 
 #### Dashboard
 
-![Dashboard](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Dashboard_Final.png)
+![Dashboard](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Dashboard_Final.png)
 
 #### Task Management Hub
 
-![Tasks](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Tasks_Final.png)
+![Tasks](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Tasks_Final.png)
 
 #### Adding a Task
 
-![Add](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Add_Task.png)
+![Add](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Add_Task.png)
 
 #### Updating a Task
 
-![Edit](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Update_Task.png)
+![Edit](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Update_Task.png)
 
 #### Account Management Hub
 
-![Accounts](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Account.png)
+![Accounts](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Account.png)
 
 ## Tech Stack
 
 To plan my project I made use of Jira's scrum boards, to create the application I used Python & Flask whilst Github was my choice of version control system. Google Cloud is the deployment server and for continous integration I used Jenkins.
 
-![Stack](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Stack.png)
+![Stack](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Stack.png)
 
 #### Jira Sprint
 
-![Jira](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Sprint%20Overview.png)
-![Jira2](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Sprint%20Roadmap%20%26%20Insights.png)
-![Jira3](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Burndown%20Chart.png)
+![Jira](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Sprint%20Overview.png)
+![Jira2](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Sprint%20Roadmap%20%26%20Insights.png)
+![Jira3](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Burndown%20Chart.png)
 
 To keep production seamless I used github webhooks to keep Jenkins and Github integrated and allow for automatic builds to happen upon pushing commits. I also used smart commits to update my Jira sprint.
 
-![Github](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Github.png)
-![Jenkins](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Jenkins.png)
+![Github](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Github.png)
+![Jenkins](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Jenkins.png)
 
 ## Testing
 
 I made use of pytest and flask-testing to test my app. Unfortunately I had some trouble with the login manager feature and I was unable to work out how to fix this error before the deadline. The coverage is also pretty low sitting at 79% total.
 
-![Tests](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Tests.png)
+![Tests](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Tests.png)
 
 ## Risk Assessment
 
-![RA](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Risk%20Assessment%20Screenshot.png)
+![RA](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Risk%20Assessment%20Screenshot.png)
 
 ## Latest Updates
 
