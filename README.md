@@ -118,7 +118,7 @@ I made use of pytest and flask-testing to test my app. Unfortunately I had some 
 
 - 12/11/2021:
 
-  - Logo href used to always redired to landing page, now redirected to dashboard when logged in.
+  - Logo href used to always redirected to landing page, now redirected to dashboard when logged in.
 
   - Changed background and improved styling.
     ![before](https://github.com/BrxdPvrple/seiri_task_manager/blob/main/documents/Task%20Management%20Hub.png)
@@ -130,7 +130,7 @@ I made use of pytest and flask-testing to test my app. Unfortunately I had some 
 - Passwords currently unsafe via HTTP and require HTTPS for end to end encryption.
 - Edit tasks function doesn't prefill text with current task name and description.
 - Not yet optimized for mobile browsers.
-- Stack trace error is thrown when trying to enter duplicate details; needs try/except statements to catch erros and prompt users to input a new username or email.
+- Stack trace error is thrown when trying to enter duplicate details; needs try/except statements to catch errors and prompt users to input a new username or email.
 
 ## Future Development
 
