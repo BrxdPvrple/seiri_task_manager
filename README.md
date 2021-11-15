@@ -47,35 +47,35 @@ Upon connecting to the site the home page provides you with a button to sign up,
 
 #### Landing Page
 
-![Landing]()
+![Landing](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Landing.png)
 
 #### Sign Up Form
 
-![Signup]()
+![Signup](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Signup_Final.png)
 
 #### Login Form
 
-![Login]()
+![Login](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Login_Final.png)
 
 #### Dashboard
 
-![Dashboard]()
+![Dashboard](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Dashboard_Final.png)
 
 #### Task Management Hub
 
-![Tasks]()
+![Tasks](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Tasks_Final.png)
 
 #### Adding a Task
 
-![Add]()
+![Add](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Add_Task.png)
 
 #### Updating a Task
 
-![Edit]()
+![Edit](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Update_Task.png)
 
 #### Account Management Hub
 
-![Accounts]()
+![Accounts](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Account.png)
 
 ## Tech Stack
 
