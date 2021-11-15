@@ -130,7 +130,7 @@ I made use of pytest and flask-testing to test my app. Unfortunately I had some 
 - Passwords currently unsafe via HTTP and require HTTPS for end to end encryption.
 - Edit tasks function doesn't prefill text with current task name and description.
 - Not yet optimized for mobile browsers.
-- Stack trace error is thrown when tyring to enter duplicate details; needs try/except statements to catch erros and prompt users to input a new username or email.
+- Stack trace error is thrown when trying to enter duplicate details; needs try/except statements to catch erros and prompt users to input a new username or email.
 
 ## Future Development
 
