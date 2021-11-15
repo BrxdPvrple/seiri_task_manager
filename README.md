@@ -87,6 +87,7 @@ To plan my project I made use of Jira's scrum boards, to create the application 
 
 ![Jira](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Sprint%20Overview.png)
 ![Jira2](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Sprint%20Roadmap%20%26%20Insights.png)
+![Jira3](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Burndown%20Chart.png)
 
 To keep production seamless I used github webhooks to keep Jenkins and Github integrated and allow for automatic builds to happen upon pushing commits. I also used smart commits to update my Jira sprint.
 
