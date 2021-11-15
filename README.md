@@ -8,9 +8,9 @@ Seiri is a task manager app created using the flask framework and written in pyt
 - [Product Requirements](#Product-Requirements)
 - [App Design](#Appl-Design)
 - [Application](#Application)
-- [Risk Assessment](#Risk-Assessment)
+- [Tech Stack](#Tech-Stack)
 - [Testing](#Testing)
-- [The App](#The-App)
+- [Risk Assessment](#Risk-Assessment)
 - [Latest Updates](#Updates)
 - [Known Issues](#Known-Issues)
 - [Future Development](#Future-Development)
@@ -21,19 +21,30 @@ The aim of this project was to create a CRUD web application written in python a
 
 ## Product Requirements
 
+During the pre-planning stages of my project I wrote up a very brief software requirements specification before any actual development began.
+
+![SRS](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/SRS%20Screenshot.png)
+
+I later expanded upon this SRS by creating a more in depth product requirements document using the project pages feature on Jira.
 ![STM1](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451-1.jpg)
 ![STM2](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451-2.jpg)
 ![STM3](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/STM-2021-11-08Productrequirements-131121-1451-3.jpg)
 
 ## Application Design
 
+For my project I decided to create a task manager app that allows users to input new tasks, edit and delete them (CRUD functionality). The app utilises a SQL database with two tables that share a one-to-many relationship as illustrated in the entity relashionship diagram below.
+
+![ERD](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Entity%20Relationship%20Diagram.png)
+
+![Webpages](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Webpage%20Flow%20Chart.png)
+
 ## Application
 
 ## Tech Stack
 
-## Risk Assessment
-
 ## Testing
+
+## Risk Assessment
 
 ## Latest Updates
 
