@@ -19,8 +19,3 @@ class Tasks(db.Model):
     content = db.Column(db.VARCHAR(255)) # Task Content
     
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
-
-
-db.drop_all() # Temporary until app goes live
-db.create_all()
-
