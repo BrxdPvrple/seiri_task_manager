@@ -1,6 +1,6 @@
 from flask import url_for
 from flask_testing import TestCase
-from flask_login import current_user
+from flask_login import current_user, UserMixin, LoginManager
 from application import app, db
 from application.models import Users, Tasks
 
@@ -13,6 +13,7 @@ class TestBase(TestCase):
     def create_app(self):
         app.config.update(
             SQLALCHEMY_DATABASE_URI='sqlite:///test.db',
+            SECRET_KEY='TEST_KEY',
             DEBUG=True,
             WTF_CSRF_ENABLED=False,
             LOGIN_DISABLED=True
@@ -32,7 +33,6 @@ class TestBase(TestCase):
         db.session.commit()
 
 
-        print('Sample User: ', sample_user.id)
     # Deletes tables 
     def tearDown(self):
 
@@ -74,7 +74,7 @@ class TestViews(TestBase):
 
 
 
-    def test_dashboard_get(self):
+    def test_dashboard(self):
         response = self.client.get(url_for('dashboard'))
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Head to the tasks tab', response.data)
@@ -103,14 +103,14 @@ class TestViews(TestBase):
 
 
 
-    # def test_new_task(self):
-    #     with self.client:
-    #         response = self.client.post(url_for('new_task'),
-    #         data = dict(title='Write Song', content='I need to write a song about a girl named Billie Jean'),
-    #         follow_redirects = True
-    #         )
+    def test_new_task(self):
+        with self.client:
+            response = self.client.post(url_for('new_task'),
+            data = dict(title='Write Song', content='I need to write a song about a girl named Billie Jean'),
+            follow_redirects = True
+            )
         
-    #     self.assertTrue(current_user.id == 1)
+        self.assertTrue(current_user.id == 1)
 
   
 

@@ -94,7 +94,13 @@ To keep production seamless I used github webhooks to keep Jenkins and Github in
 
 ## Testing
 
+I made use of pytest and flask-testing to test my app. Unfortunately I had some trouble with the login manager feature and I was unable to work out how to fix this error before the deadline. The coverage is also pretty low sitting at 79% total.
+
+![Tests](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Tests.png)
+
 ## Risk Assessment
+
+![RA](https://github.com/BrxdPvrple/seiri_task_manager/blob/feature/documents/Risk%20Assessment%20Screenshot.png)
 
 ## Latest Updates
 
